@@ -14,7 +14,7 @@ The docker image is below:
 
 [jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line.
 
-`jcli cwp --config-path formula.yaml`
+`jcli cwp --install-artifacts --config-path formula.yaml`
 
 # Plugins
 Most of the plugins come from Jenkins community, but parts of them don't:
