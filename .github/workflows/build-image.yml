@@ -31,5 +31,6 @@ jobs:
           export PATH=.:$PATH:phantomjs/bin
           jcli cwp --config-path formula.yaml
       - name: Push Image
+        run: |
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
           docker push surenpi/test:ks-jenkins
