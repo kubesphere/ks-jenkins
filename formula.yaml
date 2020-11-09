@@ -7,7 +7,7 @@ buildSettings:
   docker:
     base: jenkins/jenkins:2.176.2
     tag: jenkins/jenkins-formula:v0.0.1
-    build: false
+    build: true
 war:
   groupId: org.jenkins-ci.main
   artifactId: jenkins-war
@@ -169,9 +169,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: kubesphere-token-auth
     source:
-      #    version: 1.4-SNAPSHOT (private-5dfe1c22-root)
-      git: https://github.com/kubesphere/kubesphere-token-auth-plugin
-      branch: master
+      version: 1.2-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: mapdb-api
     source:
@@ -355,9 +353,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: build-monitor-plugin
     source:
-      #    version: 1.12+build.201809061734
-      git: https://gitee.com/jenkins-zh/jenkins-build-monitor-plugin
-      branch: v1.12+build.201809061734
+      version: 1.12-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-git-pipeline
     source:
@@ -470,12 +466,10 @@ plugins:
     artifactId: jquery
     source:
       version: 1.11.2-0
-  - groupId: io.jenkins.plugins
-    artifactId: kubesphere-extension
+  - groupId: io.jenkins.kubesphere.plugins
+    artifactId: kubesphere-extension-ext
     source:
-      #    version: 1.0-SNAPSHOT (private-09/26/2019 18:34-runzexia)
-      git: https://github.com/jenkinsci/kubesphere-extension-plugin
-      branch: master
+      version: 0.4.0-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: matrix-project
     source:
@@ -539,7 +533,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: pipeline-input-step
     source:
-      version: "2.10"
+      version: "2.12-rc390.24ce2a334298"
   - groupId: org.jenkins-ci.plugins
     artifactId: jdk-tool
     source:
