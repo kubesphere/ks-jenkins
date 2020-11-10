@@ -9,6 +9,7 @@ The docker image is below:
 `surenpi/test:ks-jenkins`
 
 > Please don't forget the change the docker image path
+> kubesphere/jenkins-ks:2.176.2
 
 ## Build from source
 

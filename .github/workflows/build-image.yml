@@ -23,6 +23,8 @@ jobs:
           ls -ahl
       - name: Build
         run: |
+          mkdir -p ~/.m2
+          echo "${{secrets.MVN_SETTINGS}}" >> ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
           export PATH=.:$PATH:phantomjs/bin
           jcli cwp --config-path formula.yaml
