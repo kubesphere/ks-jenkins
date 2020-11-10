@@ -31,4 +31,5 @@ jobs:
       - name: Push Image
         run: |
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
+          docker tag jenkins/jenkins-formula:v0.0.1 surenpi/test:ks-jenkins
           docker push surenpi/test:ks-jenkins
