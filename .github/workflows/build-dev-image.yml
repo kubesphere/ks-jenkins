@@ -2,8 +2,9 @@ name: Build Image
 
 on:
   push:
-    tags:
-      - v**
+    branches:
+      - master
+      - "releases-**"
 
 jobs:
   build:
@@ -31,4 +32,5 @@ jobs:
       - name: Push Image
         run: |
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
-          docker push kubesphere/ks-jenkins:2.176.2
+          docker tag kubesphere/ks-jenkins:2.176.2 kubespheredev/ks-jenkins:2.176.2
+          docker push kubespheredev/ks-jenkins:2.176.2

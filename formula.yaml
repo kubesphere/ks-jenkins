@@ -6,7 +6,7 @@ bundle:
 buildSettings:
   docker:
     base: jenkins/jenkins:2.176.2
-    tag: jenkins/jenkins-formula:v0.0.1
+    tag: kubesphere/ks-jenkins:2.176.2
     build: true
 war:
   groupId: org.jenkins-ci.main
