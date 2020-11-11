@@ -169,7 +169,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: kubesphere-token-auth
     source:
-      version: 1.2-SNAPSHOT
+      version: 1.6-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: mapdb-api
     source:
