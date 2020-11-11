@@ -4,12 +4,12 @@ Jenkins distribution for [kubesphere](https://github.com/kubesphere/kubesphere)
 `ks-jenkins` is an out-of-the-box solution which base on [custom-war-packager](https://github.com/jenkinsci/custom-war-packager).
 
 # Get started
-The docker image is below:
+The docker images are below:
 
-`surenpi/test:ks-jenkins`
-
-> Please don't forget the change the docker image path
-> kubesphere/jenkins-ks:2.176.2
+| | |
+|---|---|
+| official | `kubesphere/ks-jenkins:2.176.2` |
+| experimental | `kubespheredev/ks-jenkins:2.176.2` |
 
 ## Build from source
 
