@@ -27,6 +27,8 @@ jobs:
           mkdir -p ~/.m2
           echo "${{secrets.MVN_SETTINGS}}" > ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
+          curl -L https://cdn.jsdelivr.net/gh/jenkins-zh/jcli-repo@master/jcli-linux-amd64.tar.gz|tar xzv
+
           export PATH=.:$PATH:phantomjs/bin
           jcli cwp --install-artifacts --config-path formula.yaml
       - name: Push Image
