@@ -31,6 +31,10 @@ jobs:
           jcli cwp --install-artifacts --config-path formula.yaml
       - name: Push Image
         run: |
+          export PATH=.:$PATH
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
-          docker tag kubesphere/ks-jenkins:2.176.2 kubespheredev/ks-jenkins:2.176.2
-          docker push kubespheredev/ks-jenkins:2.176.2
+
+          jcli cwp --config-path formula.yaml --print-version
+          ver=$(jcli cwp --config-path formula.yaml --print-version)
+          docker tag kubesphere/ks-jenkins:${ver} kubespheredev/ks-jenkins:${ver}
+          docker push kubespheredev/ks-jenkins:${ver}
