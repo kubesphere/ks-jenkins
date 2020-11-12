@@ -8,8 +8,8 @@ The docker images are below:
 
 | | |
 |---|---|
-| official | `kubesphere/ks-jenkins:2.176.2` |
-| experimental | `kubespheredev/ks-jenkins:2.176.2` |
+| official | `kubesphere/ks-jenkins:2.249.1` |
+| experimental | `kubespheredev/ks-jenkins:2.249.1` |
 
 ## Build from source
 
