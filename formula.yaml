@@ -333,7 +333,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: build-monitor-plugin
     source:
-      version: 1.12+build.201809061734
+      version: 1.12-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: command-launcher
     source:
