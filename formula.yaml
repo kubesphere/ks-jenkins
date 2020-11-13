@@ -413,7 +413,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: pipeline-input-step
     source:
-      version: "2.12"
+      version: "2.12-rc390.24ce2a334298"
   - groupId: org.jenkins-ci.plugins
     artifactId: pipeline-milestone-step
     source:

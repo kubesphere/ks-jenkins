@@ -24,3 +24,8 @@ Most of the plugins come from Jenkins community, but parts of them don't:
 |---|---|
 | `kubesphere-token-auth` | https://github.com/kubesphere/kubesphere-token-auth-plugin |
 | `kubesphere-extension` | https://github.com/jenkinsci/kubesphere-extension-plugin |
+
+Please pay attention to these plugins, we still need to keep use a special version of them:
+| Name | Version | Description |
+|---|---|---|
+| `pipeline-input-step` | `2.12-rc390.24ce2a334298` | Depends on [PR-33](https://github.com/jenkinsci/pipeline-input-step-plugin/pull/33) |
