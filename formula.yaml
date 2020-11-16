@@ -30,6 +30,10 @@ plugins:
     artifactId: blueocean-config
     source:
       version: 1.24.3
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-executor-info
+    source:
+      version: 1.24.3
   - groupId: org.jenkins-ci.ui
     artifactId: ace-editor
     source:
