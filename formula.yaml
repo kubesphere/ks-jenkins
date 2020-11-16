@@ -150,10 +150,10 @@ plugins:
     artifactId: github-branch-source
     source:
       version: 2.9.1
-  - groupId: io.jenkins.kubesphere.plugins
-    artifactId: kubesphere-extension
-    source:
-      version: 0.4.0-SNAPSHOT
+  # - groupId: io.jenkins.kubesphere.plugins
+  #   artifactId: kubesphere-extension
+  #   source:
+  #     version: 0.4.0-SNAPSHOT
   - groupId: io.jenkins.plugins
     artifactId: plugin-util-api
     source:
@@ -594,6 +594,8 @@ plugins:
     artifactId: workflow-support
     source:
       version: "3.6"
+systemProperties:
+  { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
   - type: "init"
     id: "bundle-plugins"
