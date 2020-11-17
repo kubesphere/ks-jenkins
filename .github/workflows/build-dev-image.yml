@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - master
-      - "releases-**"
+      - "release-**"
       - "dev-**"
-      - "ver-**"
 
 jobs:
   build:

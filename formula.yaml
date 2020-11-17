@@ -154,10 +154,6 @@ plugins:
     artifactId: github-branch-source
     source:
       version: 2.9.1
-  # - groupId: io.jenkins.kubesphere.plugins
-  #   artifactId: kubesphere-extension
-  #   source:
-  #     version: 0.4.0-SNAPSHOT
   - groupId: io.jenkins.plugins
     artifactId: plugin-util-api
     source:
@@ -233,7 +229,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: kubesphere-token-auth
     source:
-      version: 1.6-SNAPSHOT
+      version: 1.7
   - groupId: io.jenkins.plugins
     artifactId: localization-support
     source:
