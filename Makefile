@@ -1,2 +1,2 @@
-package:
-	jcli cwp --install-artifacts --config-path formula.yamls
+build:
+	jcli cwp --install-artifacts --config-path formula.yaml
