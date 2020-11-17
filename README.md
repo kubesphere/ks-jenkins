@@ -16,11 +16,3 @@ The docker images are below:
 [jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line.
 
 `jcli cwp --install-artifacts --config-path formula.yaml`
-
-# Plugins
-Most of the plugins come from Jenkins community, but parts of them don't:
-
-| Name | Git Repo |
-|---|---|
-| `kubesphere-token-auth` | https://github.com/kubesphere/kubesphere-token-auth-plugin |
-| `kubesphere-extension` | https://github.com/jenkinsci/kubesphere-extension-plugin |

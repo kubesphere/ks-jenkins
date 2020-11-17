@@ -37,7 +37,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: git
     source:
-      version: 3.9.3
+      version: 3.10.0
   - groupId: org.jenkins-ci.plugins
     artifactId: resource-disposer
     source:
@@ -157,7 +157,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-job
     source:
-      version: "2.32"
+      version: "2.33"
   - groupId: org.jenkins-ci.plugins
     artifactId: antisamy-markup-formatter
     source:
@@ -169,7 +169,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: kubesphere-token-auth
     source:
-      version: 1.6-SNAPSHOT
+      version: 1.7
   - groupId: org.jenkins-ci.plugins
     artifactId: mapdb-api
     source:
@@ -345,7 +345,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: git-client
     source:
-      version: 2.7.6
+      version: 2.7.7
   - groupId: org.jenkins-ci.main
     artifactId: maven-plugin
     source:
@@ -466,10 +466,6 @@ plugins:
     artifactId: jquery
     source:
       version: 1.11.2-0
-  - groupId: io.jenkins.kubesphere.plugins
-    artifactId: kubesphere-extension
-    source:
-      version: 0.4.0-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: matrix-project
     source:
@@ -562,6 +558,10 @@ plugins:
     artifactId: ace-editor
     source:
       version: "1.1"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: trilead-api
+    source:
+      version: "1.0.3"
 groovyHooks:
   - type: "init"
     id: "bundle-plugins"
