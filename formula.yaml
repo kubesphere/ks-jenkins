@@ -233,7 +233,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: gitlab-branch-source
     source:
-      version: 1.5.1
+      version: 1.5.3
   - groupId: org.jenkins-ci.plugins
     artifactId: htmlpublisher
     source:
