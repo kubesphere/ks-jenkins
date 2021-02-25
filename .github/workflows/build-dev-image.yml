@@ -47,5 +47,5 @@ jobs:
           export PATH=.:$PATH
           ver=$(jcli cwp --config-path formula.yaml --print-version)
           docker login ghcr.io --username ${{ secrets.GH_USER }} --password ${{secrets.GH_TOKEN}}
-          docker tag kubesphere/ks-jenkins:${ver} ghcr.io/kubesphere/ks-jenkins/ks-jenkins-dev:${ver}
+          docker tag kubesphere/ks-jenkins:${ver} ghcr.io/kubesphere/ks-jenkins/ks-jenkins:dev-${ver}
           docker push ghcr.io/kubesphere/ks-jenkins/ks-jenkins:dev-${ver}
