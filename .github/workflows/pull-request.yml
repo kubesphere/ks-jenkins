@@ -6,11 +6,25 @@ on:
       - master
 
 jobs:
-  MarkdownLinkCheck:
-    name: MarkdownLinkCheck
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - uses: actions/checkout@v1
+      - name: Cache
+        uses: actions/cache@v1.1.2
         with:
-          use-verbose-mode: 'yes'
+          path: ~/.m2
+          key: maven
+          restore-keys: maven
+      - name: Dependency
+        run: |
+          wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+          tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
+          ls -ahl
+      - name: Build
+        run: |
+          mkdir -p ~/.m2
+          cat .github/workflows/settings.xml | base64 -d > ~/.m2/settings.xml
+          curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
+          export PATH=.:$PATH:phantomjs/bin
+          jcli cwp --install-artifacts --config-path formula.yaml
