@@ -21,31 +21,31 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-bitbucket-pipeline
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-commons
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-config
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-dashboard
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-pipeline-api-impl
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-pipeline-editor
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: async-http-client
     source:
@@ -53,7 +53,7 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-core-js
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: authentication-tokens
     source:
@@ -61,7 +61,7 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-events
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: azure-commons
     source:
@@ -69,19 +69,19 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-executor-info
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-git-pipeline
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-jira
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-personalization
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: antisamy-markup-formatter
     source:
@@ -93,19 +93,19 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-github-pipeline
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-i18n
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-jwt
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-rest
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.plugins
     artifactId: bootstrap4-api
     source:
@@ -133,7 +133,7 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: jenkins-design-language
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.plugins
     artifactId: localization-support
     source:
@@ -161,15 +161,15 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-pipeline-scm-api
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-rest-impl
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-web
     source:
-      version: 1.24.4
+      version: 1.24.6-SNAPSHOT
   - groupId: org.jenkins-ci.plugins
     artifactId: bouncycastle-api
     source:
