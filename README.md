@@ -1,9 +1,11 @@
 # ks-jenkins
+
 Jenkins distribution for [kubesphere](https://github.com/kubesphere/kubesphere)
 
 `ks-jenkins` is an out-of-the-box solution which base on [custom-war-packager](https://github.com/jenkinsci/custom-war-packager).
 
 # Get started
+
 The docker images are below:
 
 | | |
@@ -18,6 +20,7 @@ The docker images are below:
 `jcli cwp --install-artifacts --config-path formula.yaml`
 
 # Plugins
+
 Please pay attention to these plugins, we still need to keep use a special version of them:
 
 | Name | Version | Description |
