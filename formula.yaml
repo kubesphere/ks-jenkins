@@ -606,6 +606,10 @@ plugins:
     artifactId: label-linked-jobs
     source:
       version: "6.0.1"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: prometheus
+    source:
+      version: "2.0.10"
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
