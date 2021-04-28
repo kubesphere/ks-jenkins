@@ -41,8 +41,8 @@ jobs:
 
           jcli cwp --config-path formula.yaml --print-version
           ver=$(jcli cwp --config-path formula.yaml --print-version)
-          docker tag kubesphere/ks-jenkins:${ver} kubespheredev/ks-jenkins:${ver}
-          docker push kubespheredev/ks-jenkins:${ver}
+          docker tag kubesphere/ks-jenkins:${ver} johnniang/ks-jenkins:${ver}
+          docker push johnniang/ks-jenkins:${ver}
       - name: Push Image ghcr.io
         run: |
           export PATH=.:$PATH
