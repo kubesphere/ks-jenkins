@@ -610,6 +610,10 @@ plugins:
     artifactId: prometheus
     source:
       version: "2.0.10"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: cloudbees-disk-usage-simple
+    source:
+      version: "0.10"
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
