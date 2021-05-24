@@ -1,0 +1,11 @@
+FROM maven:3.8.1-jdk-11-openj9 as cache
+
+# Cache the maven local repository
+RUN curl -L https://github.com/LinuxSuRen/http-downloader/releases/download/v0.0.29/hd-linux-amd64.tar.gz | tar xzv && \
+    mv hd /usr/local/bin && \
+    hd install jenkins-zh/jenkins-cli/jcli@v0.0.37 && \
+    apt update -y && \
+    apt install git make -y && \
+    git clone https://github.com/kubesphere/ks-jenkins && \
+    jcli cwp --install-artifacts --config-path ks-jenkins/formula.yaml || true && \
+    rm -rf ks-jenkins

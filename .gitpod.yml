@@ -1,0 +1,13 @@
+# change below image after https://github.com/kubesphere/ks-jenkins/pull/29 get merged
+image: ghcr.io/linuxsuren/ks-jenkins-gitpod:test-cache
+
+tasks:
+  - init: |
+      git config --global user.name $GIT_AUTHOR_NAME
+      git config --global user.email $GIT_COMMITTER_EMAIL
+      gh repo fork --remote
+      jcli cwp --install-artifacts --config-path formula.yaml || true
+
+vscode:
+  extensions:
+    - eamodio.gitlens
