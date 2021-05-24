@@ -1,5 +1,4 @@
-# change below image after https://github.com/kubesphere/ks-jenkins/pull/29 get merged
-image: ghcr.io/linuxsuren/ks-jenkins-gitpod:test-cache
+image: ghcr.io/kubesphere/ks-jenkins-gitpod:sha-ee0a2d3
 
 tasks:
   - init: |
