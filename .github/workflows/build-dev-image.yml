@@ -13,6 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - name: Docker meta for kubesphere
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: |
+            kubespheredev/ks-jenkins
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern=v{{major}}.{{minor}}.{{patch}}
       - name: Cache
         uses: actions/cache@v1.1.2
         with:
@@ -26,26 +39,24 @@ jobs:
           ls -ahl
       - name: Build
         run: |
+          docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
+
           mkdir -p ~/.m2
           echo "${{secrets.MVN_SETTINGS}}" > ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
-          curl -L https://cdn.jsdelivr.net/gh/jenkins-zh/jcli-repo@master/jcli-linux-amd64.tar.gz|tar xzv
 
           export PATH=.:$PATH:phantomjs/bin
-          jcli cwp --install-artifacts --config-path formula.yaml
+          jcli cwp --install-artifacts --config-path formula.yaml \
+            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+          jcli cwp --install-artifacts --config-path formula-arm.yaml --value-set output=push \
+            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
       - name: Push Image
         run: |
-          export PATH=.:$PATH
-          docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
-
-          jcli cwp --config-path formula.yaml --print-version
-          ver=$(jcli cwp --config-path formula.yaml --print-version)
-          docker tag kubesphere/ks-jenkins:${ver} kubespheredev/ks-jenkins:${ver}
-          docker push kubespheredev/ks-jenkins:${ver}
+          version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+          docker tag kubespheredev/ks-jenkins:{{.version}}-2.249.1 kubespheredev/ks-jenkins:dev-{{.version}}-2.249.1
+          docker push kubespheredev/ks-jenkins:dev-{{.version}}-2.249.1
       - name: Push Image ghcr.io
         run: |
-          export PATH=.:$PATH
-          ver=$(jcli cwp --config-path formula.yaml --print-version)
           docker login ghcr.io --username ${{ secrets.GH_USER }} --password ${{secrets.GH_TOKEN}}
-          docker tag kubesphere/ks-jenkins:${ver} ghcr.io/kubesphere/ks-jenkins/ks-jenkins:dev-${ver}
-          docker push ghcr.io/kubesphere/ks-jenkins/ks-jenkins:dev-${ver}
+          docker tag kubespheredev/ks-jenkins:dev-{{.version}}-2.249.1 ghcr.io/kubesphere/ks-jenkins:dev-{{.version}}-2.249.1
+          docker push ghcr.io/kubesphere/ks-jenkins:dev-{{.version}}-2.249.1

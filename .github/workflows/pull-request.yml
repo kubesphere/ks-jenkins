@@ -10,6 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - name: Docker meta for kubesphere
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: |
+            kubespheredev/ks-jenkins
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern=v{{major}}.{{minor}}.{{patch}}
       - name: Cache
         uses: actions/cache@v1.1.2
         with:
@@ -21,10 +34,22 @@ jobs:
           wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
           tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
           ls -ahl
+
+          # v2.0-alpha-6 is a pre-release, jcli is not able to download it automatically.
+          mkdir -p ~/.jenkins-cli
+          curl https://github.com/LinuxSuRen/custom-war-packager/releases/download/v2.0-alpha-6/custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar \
+            -L --output ~/.jenkins-cli/cwp-cli.jar
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
       - name: Build
         run: |
           mkdir -p ~/.m2
           cat .github/workflows/settings.xml | base64 -d > ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
           export PATH=.:$PATH:phantomjs/bin
-          jcli cwp --install-artifacts --config-path formula.yaml
+          jcli cwp --install-artifacts --config-path formula.yaml \
+            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+          jcli cwp --install-artifacts --config-path formula-arm.yaml --value-set output=load \
+            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
