@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        with:
-          fetch-depth: 0
       - name: Docker meta for kubesphere
         id: meta
         uses: docker/metadata-action@v3
