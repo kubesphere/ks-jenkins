@@ -9,7 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: Docker meta for kubesphere
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: |
+            kubespheredev/ks-jenkins
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern=v{{major}}.{{minor}}.{{patch}}
       - name: Cache
         uses: actions/cache@v1.1.2
         with:
@@ -23,12 +34,18 @@ jobs:
           ls -ahl
       - name: Build
         run: |
+          docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
+
           mkdir -p ~/.m2
           echo "${{secrets.MVN_SETTINGS}}" > ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
           export PATH=.:$PATH:phantomjs/bin
-          jcli cwp --install-artifacts --config-path formula.yaml
+          jcli cwp --install-artifacts --config-path formula.yaml \
+            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+
+          jcli cwp --install-artifacts --config-path formula-arm.yaml --value-set output=push \
+            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
       - name: Push Image
         run: |
-          docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
-          docker push kubesphere/ks-jenkins:2.176.2
+          version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+          docker push kubespheredev/ks-jenkins:{{.version}}-2.249.1
