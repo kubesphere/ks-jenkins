@@ -51,4 +51,4 @@ jobs:
       - name: Push Image
         run: |
           version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
-          docker push kubespheredev/ks-jenkins:{{.version}}-2.249.1
+          docker push kubespheredev/ks-jenkins:$version
