@@ -6,7 +6,7 @@ bundle:
 buildSettings:
   docker:
     base: jenkins4eval/jenkins:2.249-alpine-arm64
-    tag: kubespheredev/ks-jenkins:{{.version}}-2.249-alpine-arm64
+    tag: kubespheredev/ks-jenkins:{{.version}}-alpine-arm64
     platform: linux/arm64
     output: {{.output}}
     buildx: true
