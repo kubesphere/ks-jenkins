@@ -39,8 +39,6 @@ jobs:
         run: |
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
 
-          mkdir -p ~/.m2
-          echo "${{secrets.MVN_SETTINGS}}" > ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
 
           export PATH=.:$PATH:phantomjs/bin
