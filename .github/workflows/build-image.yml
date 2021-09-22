@@ -52,3 +52,9 @@ jobs:
         run: |
           version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
           docker push kubespheredev/ks-jenkins:$version
+      - name: Push Image ghcr.io
+        run: |
+          version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+          docker login ghcr.io --username ${{ secrets.GH_USER }} --password ${{secrets.GH_TOKEN}}
+          docker tag kubespheredev/ks-jenkins:$version ghcr.io/kubesphere/ks-jenkins:$version
+          docker push ghcr.io/kubesphere/ks-jenkins:$version

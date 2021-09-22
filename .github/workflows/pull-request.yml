@@ -43,8 +43,6 @@ jobs:
         uses: docker/setup-buildx-action@v1
       - name: Build
         run: |
-          mkdir -p ~/.m2
-          cat .github/workflows/settings.xml | base64 -d > ~/.m2/settings.xml
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
           export PATH=.:$PATH:phantomjs/bin
           jcli cwp --install-artifacts --config-path formula.yaml \
