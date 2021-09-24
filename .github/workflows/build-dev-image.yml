@@ -40,24 +40,21 @@ jobs:
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
 
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
-
           export PATH=.:$PATH:phantomjs/bin
-          jcli cwp --install-artifacts --config-path formula.yaml \
-            --value-set version=${{ steps.meta.outputs.version }}
 
           # there's no a release for the multi-arch building but https://github.com/jenkinsci/custom-war-packager/releases/tag/v2.0-alpha-6
           wget https://github.com/LinuxSuRen/custom-war-packager/releases/download/v2.0-alpha-6/custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar
           mv custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar ~/.jenkins-cli/cwp-cli.jar
-          jcli cwp --install-artifacts --config-path formula-arm.yaml --value-set output=push \
+          jcli cwp --install-artifacts --config-path formula.yaml --value-set output=push \
             --value-set version=${{ steps.meta.outputs.version }}
       - name: Push Image
         run: |
           version=${{ steps.meta.outputs.version }}
-          docker tag kubespheredev/ks-jenkins:$version-2.249.1 kubespheredev/ks-jenkins:dev-$version-2.249.1
-          docker push kubespheredev/ks-jenkins:dev-$version-2.249.1
+          docker tag kubespheredev/ks-jenkins:$version-2.312 kubespheredev/ks-jenkins:dev-$version-2.312
+          docker push kubespheredev/ks-jenkins:dev-$version-2.312
       - name: Push Image ghcr.io
         run: |
           version=${{ steps.meta.outputs.version }}
           docker login ghcr.io --username ${{ secrets.GH_USER }} --password ${{secrets.GH_TOKEN}}
-          docker tag kubespheredev/ks-jenkins:dev-$version-2.249.1 ghcr.io/kubesphere/ks-jenkins:dev-$version-2.249.1
-          docker push ghcr.io/kubesphere/ks-jenkins:dev-$version-2.249.1
+          docker tag kubespheredev/ks-jenkins:dev-$version-2.312 ghcr.io/kubesphere/ks-jenkins:dev-$version-2.312
+          docker push ghcr.io/kubesphere/ks-jenkins:dev-$version-2.312

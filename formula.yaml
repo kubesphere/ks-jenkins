@@ -5,14 +5,17 @@ bundle:
   vendor: Kubesphere Community
 buildSettings:
   docker:
-    base: jenkins/jenkins:2.249.1
+    base: jenkins/jenkins:2.312
     tag: kubespheredev/ks-jenkins:{{.version}}
+    platform: linux/arm64,linux/amd64
+    output: {{.output}}
+    buildx: true
     build: true
 war:
   groupId: org.jenkins-ci.main
   artifactId: jenkins-war
   source:
-    version: 2.249.1
+    version: 2.312
 plugins:
   - groupId: io.jenkins
     artifactId: configuration-as-code

@@ -47,5 +47,3 @@ jobs:
           export PATH=.:$PATH:phantomjs/bin
           jcli cwp --install-artifacts --config-path formula.yaml \
             --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
-          jcli cwp --install-artifacts --config-path formula-arm.yaml --value-set output=load \
-            --value-set version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
