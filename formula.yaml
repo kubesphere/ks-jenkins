@@ -491,10 +491,6 @@ plugins:
     source:
       version: "1.10"
   - groupId: org.jenkins-ci.plugins
-    artifactId: ruby-runtime
-    source:
-      version: "0.12"
-  - groupId: org.jenkins-ci.plugins
     artifactId: run-condition
     source:
       version: "1.3"
