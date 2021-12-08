@@ -6,7 +6,9 @@ bundle:
 buildSettings:
   docker:
     base: jenkins/jenkins:2.319.1
-    tag: kubespheredev/ks-jenkins:{{.version}}
+    tag: {{.tag}}
+    platform: linux/amd64,linux/arm64
+    buildx: true
     build: true
 war:
   groupId: org.jenkins-ci.main

@@ -50,8 +50,11 @@ jobs:
         run: |
           curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
           export PATH=.:$PATH:phantomjs/bin
+          wget https://github.com/LinuxSuRen/custom-war-packager/releases/download/v2.0-alpha-6/custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar
+          mv custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar ~/.jenkins-cli/cwp-cli.jar
           jcli cwp --install-artifacts --config-path formula.yaml \
-            --value-set version=${{ steps.build_env.outputs.version }}
+            --value-set output=load \
+            --value-set tag=kubespheredev/ks-jenkins:${{ steps.build_env.outputs.version }}
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.2.0
         if: github.event_name == 'pull_request'
@@ -62,9 +65,3 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
-      - name: Build for arm
-        run: |
-          curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
-          export PATH=.:$PATH:phantomjs/bin
-          jcli cwp --install-artifacts --config-path formula-arm.yaml --value-set output=load \
-            --value-set version=${{ steps.build_env.outputs.version }}
