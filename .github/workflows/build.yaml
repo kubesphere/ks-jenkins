@@ -61,6 +61,7 @@ jobs:
             --value-set platform=linux/amd64,linux/arm64
       - name: Push Image ghcr.io
         run: |
+          export PATH=.:$PATH:phantomjs/bin
           docker login ghcr.io --username ${{ secrets.GH_USER }} --password ${{secrets.GH_TOKEN}}
           jcli cwp --install-artifacts --config-path formula.yaml --value-set output=push \
             --value-set tag=ghcr.io/kubesphere/ks-jenkins:${{ steps.build_env.outputs.version }} \
