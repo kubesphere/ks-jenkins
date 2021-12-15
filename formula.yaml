@@ -414,6 +414,10 @@ plugins:
     source:
       version: "1.26"
   - groupId: org.jenkins-ci.plugins
+    artifactId: oic-auth
+    source:
+      version: "1.8"
+  - groupId: org.jenkins-ci.plugins
     artifactId: matrix-auth
     source:
       version: 2.6.4
