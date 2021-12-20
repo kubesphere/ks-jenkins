@@ -41,6 +41,10 @@ plugins:
     artifactId: blueocean-dashboard
     source:
       version: 1.24.6
+  - groupId: ru.yandex.qatools.allure
+    artifactId: allure-jenkins-plugin
+    source:
+      version: 3.11.0
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-pipeline-api-impl
     source:
