@@ -204,7 +204,7 @@ plugins:
   - groupId: org.csanchez.jenkins.plugins
     artifactId: kubernetes
     source:
-      version: 1.27.5
+      version: 1.31.2
   - groupId: org.jenkins-ci.plugins
     artifactId: generic-webhook-trigger
     source:
