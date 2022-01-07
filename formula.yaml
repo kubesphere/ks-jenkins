@@ -14,11 +14,6 @@ buildSettings:
   pom: pom.xml
   pomIgnoreRoot: true
   pomIncludeWar: true
-war:
-  groupId: org.jenkins-ci.main
-  artifactId: jenkins-war
-  source:
-    version: 2.319.1
 systemProperties:
   hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true"
   file.encoding: UTF-8
