@@ -176,7 +176,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: bouncycastle-api
     source:
-      version: "2.18"
+      version: 2.25
   - groupId: org.jenkins-ci.plugins
     artifactId: branch-api
     source:
@@ -196,7 +196,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: durable-task
     source:
-      version: "1.35"
+      version: 493.v195aefbb0ff2
   - groupId: org.jenkins-ci.plugins
     artifactId: jsch
     source:
@@ -288,7 +288,7 @@ plugins:
   - groupId: org.jenkinsci.plugins
     artifactId: pipeline-model-api
     source:
-      version: 1.8.4
+      version: 1.9.3
   - groupId: io.jenkins.plugins
     artifactId: pipeline-restful-api
     source:
@@ -312,7 +312,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: cloudbees-folder
     source:
-      version: "6.15"
+      version: "6.17"
   - groupId: org.jenkins-ci.plugins
     artifactId: config-file-provider
     source:
@@ -328,11 +328,11 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: credentials
     source:
-      version: 2.3.15
+      version: 2.6.1
   - groupId: org.jenkins-ci.plugins
     artifactId: credentials-binding
     source:
-      version: "1.24"
+      version: 1.27
   - groupId: org.jenkins-ci.plugins
     artifactId: cvs
     source:
@@ -368,7 +368,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: jackson2-api
     source:
-      version: 2.12.3
+      version: 2.13.1-242.v1a45bad25ceb
   - groupId: org.jenkins-ci.plugins
     artifactId: javadoc
     source:
@@ -408,7 +408,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: kubernetes-client-api
     source:
-      version: 4.11.1
+      version: 5.11.1-179.v12037658df90
   - groupId: org.jenkins-ci.plugins
     artifactId: ldap
     source:
@@ -424,7 +424,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: metrics
     source:
-      version: 4.0.2.7
+      version: 4.0.2.8
   - groupId: org.jenkins-ci.plugins
     artifactId: scm-api
     source:
@@ -456,11 +456,11 @@ plugins:
   - groupId: org.jenkinsci.plugins
     artifactId: kubernetes-credentials
     source:
-      version: 0.7.0
+      version: 0.9.0
   - groupId: org.jenkins-ci.plugins
     artifactId: mailer
     source:
-      version: 1.32.1
+      version: 1.34
   - groupId: org.jenkins-ci.plugins
     artifactId: matrix-project
     source:
@@ -476,7 +476,7 @@ plugins:
   - groupId: org.jenkinsci.plugins
     artifactId: pipeline-stage-tags-metadata
     source:
-      version: 1.8.4
+      version: 1.9.3
   - groupId: org.jenkins-ci.plugins
     artifactId: plain-credentials
     source:
@@ -500,7 +500,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: script-security
     source:
-      version: "1.76"
+      version: 1.77
   - groupId: org.jenkins-ci.plugins
     artifactId: ssh-credentials
     source:
@@ -508,7 +508,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: structs
     source:
-      version: 1.22
+      version: 308.v852b473a2b8c
   - groupId: org.jenkins-ci.plugins
     artifactId: subversion
     source:
@@ -528,7 +528,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: variant
     source:
-      version: "1.3"
+      version: "1.4"
   - groupId: org.jenkins-ci.plugins
     artifactId: windows-slaves
     source:
@@ -548,7 +548,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-api
     source:
-      version: "2.42"
+      version: 1108.v57edf648f5d4
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-basic-steps
     source:
@@ -556,11 +556,11 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-cps
     source:
-      version: "2.90"
+      version: 2648.va9433432b33c
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-cps-global-lib
     source:
-      version: "2.17"
+      version: 2.19
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-durable-task-step
     source:
@@ -568,15 +568,15 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-job
     source:
-      version: "2.40"
+      version: 2.41
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-scm-step
     source:
-      version: "2.11"
+      version: 2.13
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-step-api
     source:
-      version: "2.23"
+      version: 615.vb09dac339255
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-support
     source:
@@ -588,15 +588,15 @@ plugins:
   - groupId: org.jenkinsci.plugins
     artifactId: pipeline-model-definition
     source:
-      version: 1.8.4
+      version: 1.9.3
   - groupId: org.jenkinsci.plugins
     artifactId: pipeline-model-extensions
     source:
-      version: 1.8.4
+      version: 1.9.3
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-multibranch
     source:
-      version: "2.22"
+      version: 2.24
   - groupId: org.jenkins-ci.plugins
     artifactId: label-linked-jobs
     source:
