@@ -609,6 +609,11 @@ plugins:
     artifactId: cloudbees-disk-usage-simple
     source:
       version: "0.10"
+  - groupId: io.jenkins.plugins
+    artifactId: pipeline-event
+    source:
+      git: https://github.com/JohnNiang/pipeline-event-plugin.git
+      commit: d9d16530433a90d274b3ad8925dfae5d54b22cc9
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
