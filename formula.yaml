@@ -5,7 +5,7 @@ bundle:
   vendor: Kubesphere Community
 buildSettings:
   docker:
-    base: jenkins/jenkins:2.319.1
+    base: jenkins/jenkins:2.319.2
     tag: {{.tag}}
     output: {{.output}}
     platform: {{.platform}}
