@@ -610,10 +610,9 @@ plugins:
     source:
       version: "0.10"
   - groupId: io.jenkins.plugins
-    artifactId: pipeline-event
+    artifactId: generic-event
     source:
-      git: https://github.com/JohnNiang/pipeline-event-plugin.git
-      commit: d9d16530433a90d274b3ad8925dfae5d54b22cc9
+      version: 0.0.3-rc32.0c74ef0376e0
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
