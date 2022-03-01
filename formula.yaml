@@ -612,7 +612,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: generic-event
     source:
-      version: 0.0.2
+      version: 0.0.3
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
