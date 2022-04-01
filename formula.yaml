@@ -16,6 +16,25 @@ war:
   artifactId: jenkins-war
   source:
     version: 2.319.1
+
+libPatches:
+  - groupId: "org.springframework"
+    artifactId: "spring-beans"
+    source:
+      version: "5.3.18"
+  - groupId: "org.springframework"
+    artifactId: "spring-core"
+    source:
+      version: "5.3.18"
+  - groupId: "com.fasterxml.jackson.core"
+    artifactId: "jackson-databind"
+    source:
+      version: "2.12.6.1"
+  - groupId: "com.thoughtworks.xstream:xstream"
+    artifactId: "xstream"
+    source:
+      version: "1.4.19"
+
 plugins:
   - groupId: io.jenkins
     artifactId: configuration-as-code
