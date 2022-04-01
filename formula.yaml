@@ -613,6 +613,10 @@ plugins:
     artifactId: generic-event
     source:
       version: 0.0.3
+  - groupId: "org.jenkins-ci.plugins"
+    artifactId: "pipeline-utility-steps"
+    source:
+      version: "2.11.0"
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
