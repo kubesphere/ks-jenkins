@@ -54,7 +54,7 @@ jobs:
 
           jcli cwp --install-artifacts --config-path formula.yaml \
             --value-set output=load \
-            --value-set tag=kubespheredev/ks-jenkins:${{ steps.build_env.outputs.version }} \
+            --value-set tag=kubespheredev/ks-jenkins:v${{ steps.build_env.outputs.version }} \
             --value-set platform=linux/amd64
   trivy-scan:
     runs-on: ubuntu-latest
