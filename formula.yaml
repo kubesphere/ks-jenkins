@@ -428,7 +428,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: scm-api
     source:
-      version: 2.6.4
+      version: 608.vfa_f971c5a_a_e9
   - groupId: org.jenkins-ci.ui
     artifactId: momentjs
     source:
@@ -504,7 +504,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: ssh-credentials
     source:
-      version: 1.18.1
+      version: 277.v95c2fec1c047
   - groupId: org.jenkins-ci.plugins
     artifactId: structs
     source:
@@ -512,7 +512,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: subversion
     source:
-      version: 2.13.2
+      version: 2.16.0
   - groupId: org.jenkins-ci.plugins
     artifactId: support-core
     source:
