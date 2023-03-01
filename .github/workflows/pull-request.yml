@@ -107,10 +107,13 @@ jobs:
             --value-set tag=kubespheredev/ks-jenkins:${{ steps.build_env.outputs.version }} \
             --value-set platform=linux/amd64
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.2.0
+        uses: aquasecurity/trivy-action@master
+        env:
+          TRIVY_OFFLINE_SCAN: true
         if: github.event_name == 'pull_request'
         with:
           image-ref: 'kubespheredev/ks-jenkins:${{ steps.build_env.outputs.version }}'
+          timeout: 10m
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
