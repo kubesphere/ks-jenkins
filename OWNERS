@@ -1,5 +1,9 @@
 approvers:
-    - linuxsuren
-    - shaowenchen
+    - chilianyi
+    - zheng1
+    - yudong2015
+
 reviewers:
-    - kubesphere/sig-devops
+    - chilianyi
+    - zheng1
+    - yudong2015
