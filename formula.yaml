@@ -617,6 +617,18 @@ plugins:
     artifactId: skip-notifications-trait
     source:
       version: 1.0.5
+  - artifactId: caffeine-api
+    groupId: io.jenkins.plugins
+    source:
+      version: 2.9.2-29.v717aac953ff3
+  - artifactId: sshd
+    groupId: org.jenkins-ci.modules
+    source:
+      version: 3.0.3
+  - artifactId: extended-read-permission
+    groupId: org.jvnet.hudson.plugins
+    source:
+      version: 3.2
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
