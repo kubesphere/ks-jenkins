@@ -112,11 +112,11 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: bootstrap4-api
     source:
-      version: 4.5.3-1
+      version: 4.6.0-3
   - groupId: io.jenkins.plugins
     artifactId: checks-api
     source:
-      version: 1.2.0
+      version: 1.7.2
   - groupId: io.jenkins.plugins
     artifactId: gitlab-api
     source:
@@ -132,7 +132,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: jaxb
     source:
-      version: 2.3.0.1
+      version: 2.3.6-1
   - groupId: io.jenkins.blueocean
     artifactId: jenkins-design-language
     source:
@@ -184,11 +184,11 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: display-url-api
     source:
-      version: 2.3.4
+      version: 2.3.5
   - groupId: io.jenkins.plugins
     artifactId: font-awesome-api
     source:
-      version: 5.15.1-1
+      version: 5.15.2-2
   - groupId: org.jenkins-ci.plugins
     artifactId: build-timeout
     source:
@@ -300,11 +300,11 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: plugin-util-api
     source:
-      version: 1.6.0
+      version: 2.12.0
   - groupId: io.jenkins.plugins
     artifactId: popper-api
     source:
-      version: 1.16.0-7
+      version: 1.16.1-2
   - groupId: org.jenkins-ci.plugins
     artifactId: cloudbees-bitbucket-branch-source
     source:
@@ -312,11 +312,11 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: cloudbees-folder
     source:
-      version: "6.17"
+      version: 6.714.v79e858ef76a_2
   - groupId: org.jenkins-ci.plugins
     artifactId: config-file-provider
     source:
-      version: 3.7.0
+      version: 3.10.0
   - groupId: io.jenkins.plugins
     artifactId: multibranch-action-triggers
     source:
@@ -328,7 +328,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: credentials
     source:
-      version: 2.6.1
+      version: 2.6.1.1
   - groupId: org.jenkins-ci.plugins
     artifactId: credentials-binding
     source:
@@ -340,7 +340,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: echarts-api
     source:
-      version: 4.9.0-2
+      version: 5.0.2-1
   - groupId: org.jvnet.hudson.plugins
     artifactId: favorite
     source:
@@ -368,7 +368,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: jackson2-api
     source:
-      version: 2.13.1-242.v1a45bad25ceb
+      version: 2.13.3-285.vc03c0256d517
   - groupId: org.jenkins-ci.plugins
     artifactId: javadoc
     source:
@@ -384,7 +384,7 @@ plugins:
   - groupId: io.jenkins.plugins
     artifactId: jquery3-api
     source:
-      version: 3.5.1-2
+      version: 3.6.0-1
   - groupId: org.jenkins-ci.plugins
     artifactId: conditional-buildstep
     source:
@@ -404,7 +404,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: junit
     source:
-      version: "1.48"
+      version: "1.54"
   - groupId: org.jenkins-ci.plugins
     artifactId: kubernetes-client-api
     source:
@@ -460,11 +460,11 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: mailer
     source:
-      version: 1.34
+      version: 414.vcc4c33714601
   - groupId: org.jenkins-ci.plugins
     artifactId: matrix-project
     source:
-      version: "1.18"
+      version: 771.v574584b_39e60
   - groupId: org.jenkins-ci.plugins
     artifactId: oauth-credentials
     source:
@@ -480,7 +480,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: plain-credentials
     source:
-      version: "1.7"
+      version: "1.8"
   - groupId: org.jenkins-ci.plugins
     artifactId: resource-disposer
     source:
@@ -500,7 +500,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: script-security
     source:
-      version: 1.77
+      version: 1138.v8e727069a_025
   - groupId: org.jenkins-ci.plugins
     artifactId: ssh-credentials
     source:
@@ -508,7 +508,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: structs
     source:
-      version: 308.v852b473a2b8c
+      version: 318.va_f3ccb_729b_71
   - groupId: org.jenkins-ci.plugins
     artifactId: subversion
     source:
@@ -520,7 +520,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: token-macro
     source:
-      version: "2.13"
+      version: 293.v283932a_0a_b_49
   - groupId: org.jenkins-ci.plugins
     artifactId: trilead-api
     source:
@@ -548,7 +548,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-api
     source:
-      version: 1108.v57edf648f5d4
+      version: 1143.v2d42f1e9dea_5
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-basic-steps
     source:
@@ -568,7 +568,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-job
     source:
-      version: 2.41
+      version: 1145.v7f2433caa07f
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-scm-step
     source:
@@ -576,7 +576,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-step-api
     source:
-      version: 615.vb09dac339255
+      version: 625.vd896b_f445a_f8
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-support
     source:
@@ -629,6 +629,18 @@ plugins:
     groupId: org.jvnet.hudson.plugins
     source:
       version: 3.2
+  - artifactId: javax-activation-api
+    groupId: io.jenkins.plugins
+    source:
+      version: 1.2.0-3
+  - artifactId: javax-mail-api
+    groupId: io.jenkins.plugins
+    source:
+      version: 1.6.2-6
+  - artifactId: email-ext
+    groupId: org.jenkins-ci.plugins
+    source:
+      version: "2.89"
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
