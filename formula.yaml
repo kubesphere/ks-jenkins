@@ -623,4 +623,4 @@ groovyHooks:
   - type: "init"
     id: "bundle-plugins"
     source:
-      dir: remove-bundle-plugins.groovy
+      dir: ./scripts/remove-bundle-plugins.groovy
