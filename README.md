@@ -8,7 +8,7 @@ The docker images are below:
 
 | | |
 |---|---|
-| official | `kubesphere/ks-jenkins:v3.4.0-2.319.3` |
+| official | `kubesphere/ks-jenkins:v4.0.0-2.346.3` |
 | experimental | `kubespheredev/ks-jenkins:master` |
 
 ## Build from source
