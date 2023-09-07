@@ -74,11 +74,11 @@ if __name__ == '__main__':
 
     check(old_plugins, new_plugins)
 
-    print "Add plugins: "
-    print yaml.dump(add_plugins)
+    print("Add plugins: ")
+    print(yaml.dump(add_plugins))
 
-    print "\nupdate plugins: "
-    print yaml.dump(update_plugins)
+    print("\nupdate plugins: ")
+    print(yaml.dump(update_plugins))
 
-    print "\ndelete plugins: "
-    print yaml.dump(delete_plugins)
+    print("\ndelete plugins: ")
+    print(yaml.dump(delete_plugins))
