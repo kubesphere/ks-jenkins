@@ -25,10 +25,6 @@ plugins:
     artifactId: ant
     source:
       version: "1.11"
-  - groupId: org.jenkins-ci.plugins
-    artifactId: azure-commons
-    source:
-      version: 1.0.5
   - groupId: io.jenkins.blueocean
     artifactId: blueocean
     source:
@@ -389,10 +385,6 @@ plugins:
     artifactId: jsch
     source:
       version: 0.2.8-65.v052c39de79b_2
-  - groupId: org.jenkins-ci.plugins
-    artifactId: kubernetes-cd
-    source:
-      version: 2.3.1
   - groupId: org.jenkins-ci.plugins
     artifactId: ldap
     source:
