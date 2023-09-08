@@ -673,6 +673,10 @@ plugins:
     artifactId: favorite
     source:
       version: 2.3.2
+  - artifactId: build-user-vars-plugin
+    groupId: org.jenkins-ci.plugins
+    source:
+      version: '1.9'
 systemProperties:
   { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
 groovyHooks:
