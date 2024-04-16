@@ -33,6 +33,11 @@ jobs:
           tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
           ls -ahl
 
+          wget https://github.com/kubesphere/ks-jenkins/releases/download/v4.0.0-2.346.3/com.atlassian.platform-platform.3.1.7.tar.gz
+          tar -zxvf com.atlassian.platform-platform.3.1.7.tar.gz
+          mkdir -p ~/.m2/repository/com/atlassian
+          mv platform ~/.m2/repository/com/atlassian/
+
           # v2.0-alpha-6 is a pre-release, jcli is not able to download it automatically.
           mkdir -p ~/.jenkins-cli
           curl https://github.com/LinuxSuRen/custom-war-packager/releases/download/v2.0-alpha-6/custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar \
