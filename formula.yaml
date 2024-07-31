@@ -349,10 +349,6 @@ plugins:
     artifactId: jquery3-api
     source:
       version: 3.6.1-2
-  - groupId: io.jenkins.plugins
-    artifactId: kubesphere-token-auth
-    source:
-      version: "1.7"
   - groupId: org.jenkins-ci.plugins.pipeline-stage-view
     artifactId: pipeline-stage-view
     source:
