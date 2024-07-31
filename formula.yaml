@@ -248,7 +248,7 @@ plugins:
   - groupId: org.jenkins-ci.plugins
     artifactId: email-ext
     source:
-      version: "2.89"
+      version: "2.90"
   - groupId: org.jenkins-ci.plugins
     artifactId: git
     source:
@@ -636,11 +636,11 @@ plugins:
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-basic-steps
     source:
-      version: "2.22"
+      version: 980.v82219a_ed188e
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-job
     source:
-      version: 1145.v7f2433caa07f
+      version: 1189.va_d37a_e9e4eda_
   - groupId: org.jenkins-ci.plugins.workflow
     artifactId: workflow-multibranch
     source:
