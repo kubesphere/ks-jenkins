@@ -76,7 +76,7 @@ plugins:
   - groupId: io.jenkins.blueocean
     artifactId: blueocean-jira
     source:
-      version: 1.26.0
+      version: 1.27.11
   - groupId: org.jenkins-ci.plugins
     artifactId: authentication-tokens
     source:
