@@ -1,24 +1,29 @@
 name: Build Image
 
 on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Image Tag"
+        default: "latest"
   push:
     branches:
-      - master
-      - "release-**"
+      - 'main'
+      - 'master'
     tags:
-      - v**
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Docker meta for kubesphere
         id: meta
         uses: docker/metadata-action@v3
         with:
           images: |
-            kubespheredev/ks-jenkins
+            kubesphere/ks-jenkins
           tags: |
             type=schedule
             type=ref,event=branch
@@ -41,28 +46,14 @@ jobs:
           curl https://github.com/LinuxSuRen/custom-war-packager/releases/download/v2.0-alpha-6/custom-war-packager-cli-2.0-alpha-7-20210527.031403-1-jar-with-dependencies.jar \
             -L --output ~/.jenkins-cli/cwp-cli.jar
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+        uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      - name: Build env
-        id: build_env
-        shell: bash
-        run: |
-          echo "::set-output name=version::${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}"
-      - name: Build
+        uses: docker/setup-buildx-action@v3
+      - name: Build and Push
         run: |
           docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{secrets.DOCKER_HUB_TOKEN}}
 
-          curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv
+          curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz | tar xzv
           export PATH=.:$PATH:phantomjs/bin
 
-          jcli cwp --install-artifacts --config-path formula.yaml --value-set output=push \
-            --value-set tag=kubespheredev/ks-jenkins:v${{ steps.build_env.outputs.version }} \
-            --value-set platform=linux/amd64,linux/arm64
-      - name: Push Image ghcr.io
-        run: |
-          export PATH=.:$PATH:phantomjs/bin
-          docker login ghcr.io --username ${{ secrets.GH_USER }} --password ${{secrets.GH_TOKEN}}
-          jcli cwp --install-artifacts --config-path formula.yaml --value-set output=push \
-            --value-set tag=ghcr.io/kubesphere/ks-jenkins:v${{ steps.build_env.outputs.version }} \
-            --value-set platform=linux/amd64,linux/arm64
+          jcli cwp --install-artifacts --config-path formula.yaml
