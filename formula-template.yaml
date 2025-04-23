@@ -1,0 +1,654 @@
+bundle:
+  groupId: io.github.ks-jenkins
+  artifactId: ks-jenkins
+  description: Jenkins formula for Kubesphere
+  vendor: Kubesphere Community
+buildSettings:
+  docker:
+    base: jenkins/jenkins:2.492.3
+    tag: v4.2.0-2.492.3
+    output: push
+    platform: linux/amd64
+    buildx: true
+    build: true
+war:
+  groupId: org.jenkins-ci.main
+  artifactId: jenkins-war
+  source:
+    version: 2.492.3
+plugins:
+  - groupId: io.jenkins
+    artifactId: configuration-as-code
+    source:
+      version: 1569.vb_72405b_80249
+  - groupId: org.jenkins-ci.plugins
+    artifactId: ant
+    source:
+      version: "1.11"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: azure-commons
+    source:
+      version: 1.0.5
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-config
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-dashboard
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-git-pipeline
+    source:
+      version: 1.26.0
+  - groupId: org.jenkins-ci.plugins
+    artifactId: antisamy-markup-formatter
+    source:
+      version: "2.1"
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-events
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-bitbucket-pipeline
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-github-pipeline
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-i18n
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-jira
+    source:
+      version: 1.27.11
+  - groupId: org.jenkins-ci.plugins
+    artifactId: authentication-tokens
+    source:
+      version: "1.4"
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-commons
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-personalization
+    source:
+      version: 1.26.0
+  - groupId: org.jenkins-ci.plugins
+    artifactId: blueocean-autofavorite
+    source:
+      version: 1.2.4
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-core-js
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-jwt
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-pipeline-editor
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-pipeline-scm-api
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-rest-impl
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-web
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.plugins
+    artifactId: bootstrap5-api
+    source:
+      version: 5.2.1-3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: blueocean-display-url
+    source:
+      version: 2.4.1
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-pipeline-api-impl
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.blueocean
+    artifactId: blueocean-rest
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.plugins
+    artifactId: bootstrap4-api
+    source:
+      version: 4.6.0-3
+  - groupId: io.jenkins.plugins
+    artifactId: caffeine-api
+    source:
+      version: 2.9.3-65.v6a_47d0f4d1fe
+  - groupId: io.jenkins.blueocean
+    artifactId: jenkins-design-language
+    source:
+      version: 1.26.0
+  - groupId: io.jenkins.plugins
+    artifactId: jakarta-activation-api
+    source:
+      version: 2.0.1-2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: apache-httpcomponents-client-4-api
+    source:
+      version: 4.5.13-138.v4e7d9a_7b_a_e61
+  - groupId: org.jenkins-ci.plugins
+    artifactId: bouncycastle-api
+    source:
+      version: "2.25"
+  - groupId: io.jenkins.plugins
+    artifactId: checks-api
+    source:
+      version: 1.8.1
+  - groupId: org.jenkins-ci.plugins
+    artifactId: conditional-buildstep
+    source:
+      version: 1.4.2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: display-url-api
+    source:
+      version: 2.3.6
+  - groupId: io.jenkins.plugins
+    artifactId: font-awesome-api
+    source:
+      version: 6.2.1-1
+  - groupId: com.coravy.hudson.plugins.github
+    artifactId: github
+    source:
+      version: 1.32.0
+  - groupId: io.jenkins.plugins
+    artifactId: jakarta-mail-api
+    source:
+      version: 2.0.1-2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: cloudbees-folder
+    source:
+      version: 6.714.v79e858ef76a_2
+  - groupId: io.jenkins.plugins
+    artifactId: commons-text-api
+    source:
+      version: 1.10.0-27.vb_fa_3896786a_7
+  - groupId: org.jenkins-ci.plugins
+    artifactId: credentials
+    source:
+      version: 1143.vb_e8b_b_ceee347
+  - groupId: org.jenkins-ci.plugins
+    artifactId: docker-commons
+    source:
+      version: "1.17"
+  - groupId: io.jenkins.plugins
+    artifactId: echarts-api
+    source:
+      version: 5.4.0-1
+  - groupId: io.jenkins.plugins
+    artifactId: gitlab-api
+    source:
+      version: 1.0.6
+  - groupId: io.jenkins.plugins
+    artifactId: javax-mail-api
+    source:
+      version: 1.6.2-6
+  - groupId: org.jenkins-ci.plugins
+    artifactId: oic-auth
+    source:
+      version: "2.1"
+  - groupId: io.jenkins.plugins
+    artifactId: okhttp-api
+    source:
+      version: 3.14.9
+  - groupId: io.jenkins.plugins
+    artifactId: pipeline-restful-api
+    source:
+      version: "0.9"
+  - groupId: io.jenkins.plugins
+    artifactId: popper2-api
+    source:
+      version: 2.11.6-2
+  - groupId: io.jenkins.plugins
+    artifactId: snakeyaml-api
+    source:
+      version: 1.33-90.v80dcb_3814d35
+  - groupId: org.jenkins-ci.plugins
+    artifactId: config-file-provider
+    source:
+      version: 3.10.0
+  - groupId: org.jenkins-ci.plugins
+    artifactId: credentials-binding
+    source:
+      version: 523.525.vb_72269281873
+  - groupId: org.jenkins-ci.plugins
+    artifactId: cvs
+    source:
+      version: "2.16"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: email-ext
+    source:
+      version: "2.90"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: git
+    source:
+      version: 4.14.3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: git-server
+    source:
+      version: "1.9"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: google-oauth-plugin
+    source:
+      version: 1.0.2
+  - groupId: io.jenkins.plugins
+    artifactId: ionicons-api
+    source:
+      version: 31.v4757b_6987003
+  - groupId: io.jenkins.plugins
+    artifactId: javax-activation-api
+    source:
+      version: 1.2.0-3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: build-timeout
+    source:
+      version: "1.20"
+  - groupId: org.csanchez.jenkins.plugins
+    artifactId: kubernetes
+    source:
+      version: 1.31.2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: branch-api
+    source:
+      version: 2.1071.v1a_188a_562481
+  - groupId: org.jenkins-ci.plugins
+    artifactId: durable-task
+    source:
+      version: 507.v050055d0cb_dd
+  - groupId: io.jenkins.plugins
+    artifactId: generic-event
+    source:
+      version: 0.0.3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: cloudbees-disk-usage-simple
+    source:
+      version: "0.10"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: command-launcher
+    source:
+      version: "1.5"
+  - groupId: io.jenkins.plugins
+    artifactId: commons-lang3-api
+    source:
+      version: 3.12.0-36.vd97de6465d5b_
+  - groupId: org.jenkins-ci.plugins
+    artifactId: external-monitor-job
+    source:
+      version: "1.7"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: generic-webhook-trigger
+    source:
+      version: "1.72"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: git-client
+    source:
+      version: 3.13.1
+  - groupId: org.jenkins-ci.plugins
+    artifactId: github-api
+    source:
+      version: "1.116"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: htmlpublisher
+    source:
+      version: "1.25"
+  - groupId: io.jenkins.plugins
+    artifactId: jaxb
+    source:
+      version: 2.3.6-1
+  - groupId: org.jenkins-ci.plugins
+    artifactId: github-branch-source
+    source:
+      version: 2.9.1
+  - groupId: io.jenkins.plugins
+    artifactId: gitlab-branch-source
+    source:
+      version: 1.5.4
+  - groupId: org.jenkins-ci.plugins
+    artifactId: javadoc
+    source:
+      version: 226.v71211feb_e7e9
+  - groupId: org.jenkins-ci.plugins
+    artifactId: jdk-tool
+    source:
+      version: "1.4"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: jquery
+    source:
+      version: 1.12.4-1
+  - groupId: io.jenkins.plugins
+    artifactId: jquery3-api
+    source:
+      version: 3.6.1-2
+  - groupId: org.jenkins-ci.plugins.pipeline-stage-view
+    artifactId: pipeline-stage-view
+    source:
+      version: "2.18"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: plain-credentials
+    source:
+      version: 143.v1b_df8b_d3b_e48
+  - groupId: io.jenkins.plugins
+    artifactId: plugin-util-api
+    source:
+      version: 2.20.0
+  - groupId: io.jenkins.plugins
+    artifactId: popper-api
+    source:
+      version: 1.16.1-2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: jackson2-api
+    source:
+      version: 2.14.2-319.v37853346a_229
+  - groupId: org.jenkins-ci.plugins
+    artifactId: jira
+    source:
+      version: 3.12
+  - groupId: org.jenkins-ci.plugins
+    artifactId: job-dsl
+    source:
+      version: "1.77"
+  - groupId: io.jenkins.plugins
+    artifactId: localization-support
+    source:
+      version: "1.1"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: jsch
+    source:
+      version: 0.2.8-65.v052c39de79b_2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: ldap
+    source:
+      version: "1.26"
+  - groupId: org.6wind.jenkins
+    artifactId: lockable-resources
+    source:
+      version: "2.10"
+  - groupId: org.jenkins-ci.main
+    artifactId: maven-plugin
+    source:
+      version: "3.22"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: cloudbees-bitbucket-branch-source
+    source:
+      version: 805.v7f97d29dc0f5
+  - groupId: org.jenkins-ci.plugins
+    artifactId: docker-workflow
+    source:
+      version: "1.24"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: handy-uri-templates-2-api
+    source:
+      version: 2.1.8-22.v77d5b_75e6953
+  - groupId: org.jenkins-ci.plugins
+    artifactId: junit
+    source:
+      version: 1166.1168.vd6b_8042a_06de
+  - groupId: org.jenkins-ci.ui
+    artifactId: jquery-detached
+    source:
+      version: 1.2.1
+  - groupId: org.jenkins-ci.plugins
+    artifactId: kubernetes-client-api
+    source:
+      version: 5.11.1-179.v12037658df90
+  - groupId: org.jenkins-ci.plugins
+    artifactId: label-linked-jobs
+    source:
+      version: 6.0.1
+  - groupId: org.jenkins-ci.plugins
+    artifactId: localization-zh-cn
+    source:
+      version: 1.0.23
+  - groupId: org.jenkins-ci.plugins
+    artifactId: mailer
+    source:
+      version: 435.438.v5b_81173f5b_a_1
+  - groupId: org.jenkins-ci.plugins
+    artifactId: mapdb-api
+    source:
+      version: 1.0.9.0
+  - groupId: org.jenkins-ci.plugins
+    artifactId: matrix-project
+    source:
+      version: 772.v494f19991984
+  - groupId: org.jenkinsci.plugins
+    artifactId: managed-scripts
+    source:
+      version: "1.4"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: matrix-auth
+    source:
+      version: 2.6.4
+  - groupId: org.jenkins-ci.plugins
+    artifactId: mercurial
+    source:
+      version: "2.12"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: metrics
+    source:
+      version: 4.2.13-420.vea_2f17932dd6
+  - groupId: org.jenkinsci.plugins
+    artifactId: kubernetes-credentials
+    source:
+      version: 0.9.0
+  - groupId: io.jenkins.plugins
+    artifactId: multibranch-action-triggers
+    source:
+      version: 1.8.5
+  - groupId: org.jenkins-ci.plugins
+    artifactId: oauth-credentials
+    source:
+      version: "0.4"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pipeline-graph-analysis
+    source:
+      version: 202.va_d268e64deb_3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pipeline-input-step
+    source:
+      version: 466.v6d0a_5df34f81
+  - groupId: org.jenkins-ci.modules
+    artifactId: sshd
+    source:
+      version: 3.0.3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: node-iterator-api
+    source:
+      version: "1.5"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: parameterized-trigger
+    source:
+      version: "2.45"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pipeline-milestone-step
+    source:
+      version: 111.v449306f708b_7
+  - groupId: org.jenkins-ci.plugins
+    artifactId: resource-disposer
+    source:
+      version: "0.14"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pam-auth
+    source:
+      version: "1.6"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pipeline-build-step
+    source:
+      version: 488.v8993df156e8d
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pipeline-stage-step
+    source:
+      version: 305.ve96d0205c1c6
+  - groupId: org.jenkins-ci.plugins
+    artifactId: pubsub-light
+    source:
+      version: "1.16"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: role-strategy
+    source:
+      version: "3.1"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: run-condition
+    source:
+      version: "1.5"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: script-security
+    source:
+      version: 1229.v4880b_b_e905a_6
+  - groupId: org.jenkins-ci.plugins
+    artifactId: skip-notifications-trait
+    source:
+      version: 1.0.5
+  - groupId: org.jenkins-ci.plugins
+    artifactId: sse-gateway
+    source:
+      version: "1.24"
+  - groupId: org.jenkinsci.plugins
+    artifactId: pipeline-stage-tags-metadata
+    source:
+      version: 1.9.3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: prometheus
+    source:
+      version: 2.0.10
+  - groupId: org.jenkins-ci.plugins
+    artifactId: sonar
+    source:
+      version: "2.12"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: ssh-credentials
+    source:
+      version: 305.v8f4381501156
+  - groupId: org.jenkins-ci.plugins
+    artifactId: ssh-slaves
+    source:
+      version: 1.31.2
+  - groupId: org.jenkins-ci.plugins
+    artifactId: structs
+    source:
+      version: 324.va_f5d6774f3a_d
+  - groupId: org.jenkins-ci.plugins
+    artifactId: subversion
+    source:
+      version: 2.16.0
+  - groupId: org.jenkins-ci.plugins
+    artifactId: trilead-api
+    source:
+      version: 1.67.vc3938a_35172f
+  - groupId: org.jenkinsci.plugins
+    artifactId: pipeline-model-api
+    source:
+      version: 1.9.3
+  - groupId: org.jenkinsci.plugins
+    artifactId: pipeline-model-extensions
+    source:
+      version: 1.9.3
+  - groupId: org.jenkins-ci.plugins
+    artifactId: support-core
+    source:
+      version: 1241.v32a_39d7032e5
+  - groupId: org.jenkins-ci.plugins.pipeline-stage-view
+    artifactId: pipeline-rest-api
+    source:
+      version: "2.18"
+  - groupId: org.jenkins-ci.plugins
+    artifactId: scm-api
+    source:
+      version: 631.v9143df5b_e4a_a
+  - groupId: org.jenkins-ci.plugins
+    artifactId: token-macro
+    source:
+      version: 321.vd7cc1f2a_52c8
+  - groupId: org.jenkins-ci.plugins
+    artifactId: variant
+    source:
+      version: 59.vf075fe829ccb
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-aggregator
+    source:
+      version: "2.6"
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-api
+    source:
+      version: 1200.v8005c684b_a_c6
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-cps
+    source:
+      version: 3536.vb_8a_6628079d5
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-cps-global-lib
+    source:
+      version: "2.19"
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-durable-task-step
+    source:
+      version: 1217.v38306d8fa_b_5c
+  - groupId: org.jenkins-ci.plugins
+    artifactId: ws-cleanup
+    source:
+      version: "0.38"
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-basic-steps
+    source:
+      version: 980.v82219a_ed188e
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-job
+    source:
+      version: 1189.va_d37a_e9e4eda_
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-multibranch
+    source:
+      version: 716.vc692a_e52371b_
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-scm-step
+    source:
+      version: 408.v7d5b_135a_b_d49
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-step-api
+    source:
+      version: 639.v6eca_cd8c04a_a_
+  - groupId: org.jenkins-ci.plugins.workflow
+    artifactId: workflow-support
+    source:
+      version: 839.v35e2736cfd5c
+  - groupId: org.jenkinsci.plugins
+    artifactId: pipeline-model-definition
+    source:
+      version: 1.9.3
+  - groupId: org.jvnet.hudson.plugins
+    artifactId: extended-read-permission
+    source:
+      version: "3.2"
+  - groupId: org.jvnet.hudson.plugins
+    artifactId: favorite
+    source:
+      version: 2.3.2
+  - artifactId: build-user-vars-plugin
+    groupId: org.jenkins-ci.plugins
+    source:
+      version: '1.9'
+systemProperties:
+  { hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID: "true" }
+groovyHooks:
+  - type: "init"
+    id: "bundle-plugins"
+    source:
+      dir: ./scripts/remove-bundle-plugins.groovy
