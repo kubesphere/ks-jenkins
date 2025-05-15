@@ -84,6 +84,7 @@ jquery3-api:latest
 jquery:latest
 jsch:latest
 junit:latest
+kubernetes-cli:latest
 kubernetes-client-api:latest
 kubernetes-credentials:latest
 kubernetes:latest
