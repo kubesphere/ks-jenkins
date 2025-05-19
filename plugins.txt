@@ -2,7 +2,6 @@ ant:latest
 antisamy-markup-formatter:latest
 apache-httpcomponents-client-4-api:latest
 authentication-tokens:latest
-azure-commons:latest
 blueocean-autofavorite:latest
 blueocean-bitbucket-pipeline:latest
 blueocean-commons:latest
@@ -24,7 +23,6 @@ blueocean-rest-impl:latest
 blueocean-rest:latest
 blueocean-web:latest
 blueocean:latest
-bootstrap4-api:latest
 bootstrap5-api:latest
 bouncycastle-api:latest
 branch-api:latest
@@ -122,8 +120,6 @@ pipeline-stage-tags-metadata:latest
 pipeline-stage-view:latest
 plain-credentials:latest
 plugin-util-api:latest
-popper-api:latest
-popper2-api:latest
 prometheus:latest
 pubsub-light:latest
 resource-disposer:latest
@@ -147,7 +143,6 @@ variant:latest
 workflow-aggregator:latest
 workflow-api:latest
 workflow-basic-steps:latest
-workflow-cps-global-lib:latest
 workflow-cps:latest
 workflow-durable-task-step:latest
 workflow-job:latest
