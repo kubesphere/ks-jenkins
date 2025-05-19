@@ -77,7 +77,6 @@ jdk-tool:latest
 jenkins-design-language:latest
 jira:latest
 job-dsl:latest
-jquery-detached:latest
 jquery3-api:latest
 jquery:latest
 jsch:latest
@@ -108,6 +107,7 @@ pam-auth:latest
 parameterized-trigger:latest
 pipeline-build-step:latest
 pipeline-graph-analysis:latest
+pipeline-groovy-lib:latest
 pipeline-input-step:latest
 pipeline-milestone-step:latest
 pipeline-model-api:latest
