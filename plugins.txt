@@ -62,6 +62,7 @@ github-branch-source:latest
 github:latest
 gitlab-api:latest
 gitlab-branch-source:latest
+gitlab-plugin:latest
 google-oauth-plugin:latest
 handy-uri-templates-2-api:latest
 htmlpublisher:latest
